@@ -12,14 +12,14 @@ Similar to [Ember Twiddle](http://ember-twiddle.com/) or [JSFiddle](https://jsfi
 
 ```hbs
 {{#live-exec}}
-{{live-exec-template source='
+  {{live-exec-template source='
 Name: {{input value=name}}
 
 {{#if name}}
-<div>Hello, {{name}}.</div>
+  <div>Hello, {{name}}.</div>
 {{/if}}
 '}}
-{{live-exec-output}}
+  {{live-exec-output}}
 {{/live-exec}}'}}
 ```
 
