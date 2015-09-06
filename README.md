@@ -1,6 +1,6 @@
 # Ember-live-exec
 
-Interactive execution of Ember code. Show and execute Ember templates without duplication. Also allow users to edit the code and see the results interactively. Great for documenting components with live examples.
+Show and execute Ember templates without duplication. Also allow users to edit the code and see the results interactively. Great for documenting components with live examples.
 
 This README outlines the details of collaborating on this Ember addon.
 
