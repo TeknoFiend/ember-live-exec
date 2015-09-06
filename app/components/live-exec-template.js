@@ -1,0 +1,1 @@
+export { default } from 'ember-live-exec/components/live-exec-template';

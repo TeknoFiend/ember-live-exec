@@ -1,0 +1,11 @@
+.live-exec__template__basic-editor {
+  display: block;
+
+  width: 100%;
+  min-height: 100px;
+  padding: 5px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+
+  font-family: monospace;
+}
