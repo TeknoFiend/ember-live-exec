@@ -1,8 +1,30 @@
 # Ember-live-exec
 
-Show and execute Ember templates without duplication. Also allow users to edit the code and see the results interactively. Great for documenting components with live examples.
+Write (or edit) code in the browser and see the updates interactively. Document Ember code with live examples withouth duplication.
 
-This README outlines the details of collaborating on this Ember addon.
+Similar to [Ember Twiddle](http://ember-twiddle.com/) or [JSFiddle](https://jsfiddle.net/) except turned on its head. Instead of representing an entire app, ember-live-exec lets you drop `live-exec` editable examples anywhere in your existing Ember app. You can even put multiple `live-exec` regions on the same page.
+
+## Installation
+
+`ember install ember-live-exec`
+
+# Usage
+
+```hbs
+{{#live-exec}}
+{{live-exec-template source='
+Name: {{input value=name}}
+
+{{#if name}}
+<div>Hello, {{name}}.</div>
+{{/if}}
+'}}
+{{live-exec-output}}
+{{/live-exec}}'}}
+```
+
+
+# Collaboration notes
 
 ## Installation
 
