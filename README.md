@@ -23,6 +23,9 @@ Name: {{input value=name}}
 {{/live-exec}}'}}
 ```
 
+![Screenshot](/docs/demo.png)
+
+![Screencapture](/docs/demo.gif)
 
 # Collaboration notes
 
