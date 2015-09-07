@@ -34,7 +34,14 @@ To customize the template display and functionality you can pass a block to `liv
 ```hbs
 {{#live-exec}}
   {{#live-exec-template source='
-Name: {{input value=name}}
+<div>
+  Name: {{input value=name}}
+</div>
+<div>
+  Phone: {{input value=phone}}
+</div>
+
+Call {{name}} at {{phone}}
 ' as |template| }}
     {{ivy-codemirror
         value         = template.source
