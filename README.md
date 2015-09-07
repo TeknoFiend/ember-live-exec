@@ -4,11 +4,13 @@ Write (or edit) code in the browser and see the updates interactively. Document 
 
 Similar to [Ember Twiddle](http://ember-twiddle.com/) or [JSFiddle](https://jsfiddle.net/) except turned on its head. Instead of representing an entire app, ember-live-exec lets you drop `live-exec` editable examples anywhere in your existing Ember app. You can even put multiple `live-exec` regions on the same page.
 
+Demo: http://teknofiend.github.io/live-exec-demo
+
 ## Installation
 
 `ember install ember-live-exec`
 
-# Usage
+## Usage
 
 ```hbs
 {{#live-exec}}
@@ -27,7 +29,7 @@ Name: {{input value=name}}
 
 ![Screencapture](https://github.com/TeknoFiend/ember-live-exec/blob/master/docs/demo.gif)
 
-# Customization
+## Customization
 
 To customize the template display and functionality you can pass a block to `live-exec-template` and use the `source` property on the passed object.
 
@@ -59,25 +61,25 @@ Call {{name}} at {{phone}}
 
 ![Codemirror](https://github.com/TeknoFiend/ember-live-exec/blob/master/docs/demo_block.png)
 
-# Development
+## Development
 
-## Installation
+### Installation
 
 * `git clone` this repository
 * `npm install`
 * `bower install`
 
-## Running
+### Running
 
 * `ember server`
 * Visit your app at http://localhost:4200.
 
-## Running Tests
+### Running Tests
 
 * `ember test`
 * `ember test --server`
 
-## Building
+### Building
 
 * `ember build`
 
