@@ -27,7 +27,7 @@ Name: {{input value=name}}
 
 ![Screencapture](/docs/demo.gif)
 
-# Collaboration notes
+# Development
 
 ## Installation
 
