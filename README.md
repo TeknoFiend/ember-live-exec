@@ -4,7 +4,7 @@ Write (or edit) code in the browser and see the updates interactively. Document 
 
 Similar to [Ember Twiddle](http://ember-twiddle.com/) or [JSFiddle](https://jsfiddle.net/) except turned on its head. Instead of representing an entire app, ember-live-exec lets you drop `live-exec` editable examples anywhere in your existing Ember app. You can even put multiple `live-exec` regions on the same page.
 
-Demo: http://teknofiend.github.io/live-exec-demo
+Demo: [http://teknofiend.github.io/live-exec-demo](http://teknofiend.github.io/live-exec-demo)
 
 ## Installation
 

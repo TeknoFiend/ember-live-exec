@@ -1,6 +1,6 @@
 {
   "name": "ember-live-exec",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "description": "Interactive execution of Ember code.",
   "directories": {
     "doc": "doc",
@@ -45,6 +45,7 @@
     "ember-cli-babel": "^5.0.0"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config"
+    "configPath": "tests/dummy/config",
+    "demoURL": "http://teknofiend.github.io/live-exec-demo"
   }
 }
