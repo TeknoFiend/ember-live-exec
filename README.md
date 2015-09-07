@@ -23,9 +23,34 @@ Name: {{input value=name}}
 {{/live-exec}}'}}
 ```
 
-![Screenshot](/docs/demo.png)
+![Screenshot](https://github.com/TeknoFiend/ember-live-exec/blob/master/docs/demo.png)
 
-![Screencapture](/docs/demo.gif)
+![Screencapture](https://github.com/TeknoFiend/ember-live-exec/blob/master/docs/demo.gif)
+
+# Customization
+
+To customize the template display and functionality you can pass a block to `live-exec-template` and use the `source` property on the passed object.
+
+```hbs
+{{#live-exec}}
+  {{#live-exec-template source='
+Name: {{input value=name}}
+' as |template| }}
+    {{ivy-codemirror
+        value         = template.source
+        mode          = "handlebars"
+        lineNumbers   = true
+        fixedGutter   = true
+        lineWrapping  = true
+        tabSize       = 2
+        readOnly      = false
+    }}
+  {{/live-exec-template}}
+  {{live-exec-output}}
+{{/live-exec}}'}}
+```
+
+![Codemirror](https://github.com/TeknoFiend/ember-live-exec/blob/master/docs/demo_block.png)
 
 # Development
 
