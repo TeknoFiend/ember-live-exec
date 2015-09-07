@@ -8,3 +8,23 @@ Name: {{input value=name}}
   '}}
   {{live-exec-output}}
 {{/live-exec}}
+
+<br /><br /><br />
+
+
+{{#live-exec}}
+  {{#live-exec-template source='
+Name: {{input value=name}}
+' as |template| }}
+    {{ivy-codemirror
+        value         = template.source
+        mode          = "handlebars"
+        lineNumbers   = true
+        fixedGutter   = true
+        lineWrapping  = true
+        tabSize       = 2
+        readOnly      = false
+    }}
+{{/live-exec-template}}
+  {{live-exec-output}}
+{{/live-exec}}

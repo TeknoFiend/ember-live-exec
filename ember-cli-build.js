@@ -3,7 +3,9 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    // Add options here
+    codemirror: {
+      modes: ['xml', 'javascript', 'handlebars', 'htmlmixed', 'css']
+    }
   });
 
   /*
@@ -14,6 +16,7 @@ module.exports = function(defaults) {
   */
 
   app.import( app.bowerDirectory + '/ember/ember-template-compiler.js' );
+  app.import( app.bowerDirectory + '/codemirror/lib/codemirror.css' );
 
   return app.toTree();
 };

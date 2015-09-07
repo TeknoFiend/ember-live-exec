@@ -1,1 +1,5 @@
-{{textarea value=source class="live-exec__template__basic-editor"}}
+{{#if hasBlock}}
+  {{yield this}}
+{{else}}
+  {{textarea value=source class="live-exec__template__basic-editor"}}
+{{/if}}
