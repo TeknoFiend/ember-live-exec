@@ -25,9 +25,9 @@ Name: {{input value=name}}
 {{/live-exec}}'}}
 ```
 
-![Screenshot](https://github.com/TeknoFiend/ember-live-exec/blob/master/docs/demo.png)
+![Screenshot](https://raw.githubusercontent.com/TeknoFiend/ember-live-exec/master/docs/demo.png)
 
-![Screencapture](https://github.com/TeknoFiend/ember-live-exec/blob/master/docs/demo.gif)
+![Screencapture](https://raw.githubusercontent.com/TeknoFiend/ember-live-exec/master/docs/demo.gif)
 
 ## Customization
 
@@ -59,7 +59,7 @@ Call {{name}} at {{phone}}
 {{/live-exec}}'}}
 ```
 
-![Codemirror](https://github.com/TeknoFiend/ember-live-exec/blob/master/docs/demo_block.png)
+![Codemirror](https://raw.githubusercontent.com/TeknoFiend/ember-live-exec/master/docs/demo_block.png)
 
 ## Development
 
