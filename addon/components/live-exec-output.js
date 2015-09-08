@@ -4,7 +4,7 @@ import LiveExec from './live-exec';
 /* globals define */
 
 export default Ember.Component.extend({
-  classNames: 'live-exec__output',
+  classNameBindings: [':live-exec__output', 'class'],
 
   setLiveExecParent: function() {
     this.set('liveExec', this.nearestOfType( LiveExec ));

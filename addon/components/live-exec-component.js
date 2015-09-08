@@ -2,7 +2,7 @@ import Ember from 'ember';
 import LiveExec from './live-exec';
 
 export default Ember.Component.extend({
-  classNames: 'live-exec__component',
+  classNamebindings: [':live-exec__component', 'class'],
 
   /**
     Action and property definitions for the instance of the component

@@ -2,7 +2,7 @@ import Ember from 'ember';
 import LiveExec from './live-exec';
 
 export default Ember.Component.extend({
-  classNames: 'live-exec__template',
+  classNameBindings: [':live-exec__template', 'class'],
 
   /**
     The template source to render.

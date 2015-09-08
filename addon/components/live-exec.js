@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  classNames: 'live-exec',
+  classNameBindings: [':live-exec', 'class'],
 
   renderOutput: Ember.observer( 'templateComponent.source', 'outputComponent', 'componentComponent.source',
                                 function() {
