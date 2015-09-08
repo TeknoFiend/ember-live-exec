@@ -3,9 +3,11 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   classNames: 'live-exec',
 
-  renderOutput: Ember.observer( 'templateComponent.source', 'outputComponent', function() {
+  renderOutput: Ember.observer( 'templateComponent.source', 'outputComponent', 'componentComponent.source',
+                                function() {
     if( this.get('templateComponent') && this.get('outputComponent') ) {
-      this.outputComponent.reRender( this.get('templateComponent.source') );
+      this.outputComponent.reRender( this.get('templateComponent.source'),
+                                     this.get('componentComponent.source') );
     }
   }),
 
@@ -15,6 +17,10 @@ export default Ember.Component.extend({
 
   signalOutputReady: function(outputComponent) {
     this.set( 'outputComponent', outputComponent );
+  },
+
+  signalComponentReady: function(componentComponent) {
+    this.set( 'componentComponent', componentComponent );
   }
 
 });

@@ -29,9 +29,25 @@ export default Ember.Component.extend({
     return this.toString().split(/@/)[0].substr(1); 
   },
 
-  reRender: function(handlebarsSource) {
-
+  reRender: function(handlebarsSource, componentSource) {
     try {
+      if( componentSource ) {
+        var componentDef = "componentDef = { " + componentSource + "};";
+        componentDef = eval(componentDef);
+
+
+        for( var property in componentDef ) {
+          if( componentDef.hasOwnProperty( property ) ) {
+            if( property == 'actions' ) {
+              Ember.merge( this._actions, componentDef[property] );
+            }
+            else {
+              this.set( property, componentDef[property] );
+            }
+          }
+        }
+      }
+
       var precompiledTemplate = Ember.HTMLBars.compile( handlebarsSource );
 
       var guid = Ember.generateGuid();
@@ -57,6 +73,12 @@ export default Ember.Component.extend({
     } else {
       this.set('oldTemplateName', templateName);
     }
+  },
+
+  actions: {
+    // Empty hash (at least) so we can merge into it from componentSource in reRender()
+
+    // IF WE ADD AN ACTION HERE WE NEED TO DETECT COLLISIONS AND REPORT A USEFUL ERROR
   }
 
 });

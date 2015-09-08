@@ -5,12 +5,30 @@ Name: {{input value=name}}
 {{#if name}}
   <div>Hello, {{name}}.</div>
 {{/if}}
-  '}}
+'}}
   {{live-exec-output}}
 {{/live-exec}}
 
-<br /><br /><br />
+<br /><br /><br /><br /><br /><br />
 
+{{#live-exec}}
+  {{live-exec-template source='
+<div>Foo is: {{foo}}</div>
+<button {{action "toggleFoo"}}>Toggle Foo</button>
+'}}
+  {{live-exec-component source='
+foo: true,
+actions: {
+  toggleFoo: function() {
+    console.log("Foo Toggled!");
+    this.set( "foo", !this.get("foo") );
+  }
+}
+'}}
+  {{live-exec-output}}
+{{/live-exec}}
+
+<br /><br /><br /><br /><br /><br />
 
 {{#live-exec}}
   {{#live-exec-template source='
@@ -32,6 +50,24 @@ Call {{name}} at {{phone}}
         tabSize       = 2
         readOnly      = false
     }}
-{{/live-exec-template}}
+  {{/live-exec-template}}
+  {{live-exec-output}}
+{{/live-exec}}
+
+<br /><br /><br /><br /><br /><br />
+
+{{#live-exec}}
+  {{live-exec-template source='{{bar}}'}}
+  {{#live-exec-component source='bar: "hello"' as |component| }}
+    {{ivy-codemirror
+        value         = component.source
+        mode          = "handlebars"
+        lineNumbers   = true
+        fixedGutter   = true
+        lineWrapping  = true
+        tabSize       = 2
+        readOnly      = false
+    }}
+  {{/live-exec-component}}
   {{live-exec-output}}
 {{/live-exec}}

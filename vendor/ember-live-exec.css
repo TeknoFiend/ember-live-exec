@@ -1,4 +1,5 @@
-.live-exec__template__basic-editor {
+.live-exec__template__basic-editor,
+.live-exec__component__basic-editor {
   display: block;
 
   width: 100%;
