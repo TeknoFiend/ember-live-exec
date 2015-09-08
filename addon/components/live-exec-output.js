@@ -38,7 +38,7 @@ export default Ember.Component.extend({
 
         for( var property in componentDef ) {
           if( componentDef.hasOwnProperty( property ) ) {
-            if( property == 'actions' ) {
+            if( property === 'actions' ) {
               Ember.merge( this._actions, componentDef[property] );
             }
             else {

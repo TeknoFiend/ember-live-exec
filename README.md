@@ -12,6 +12,10 @@ Demo: [http://teknofiend.github.io/live-exec-demo](http://teknofiend.github.io/l
 
 ## Usage
 
+### Basic Usage
+
+The `source` parameter specifies the default contents of the editable textarea. Changing the contents of the textarea at runtime causes the rendere output to change.
+
 ```hbs
 {{#live-exec}}
   {{live-exec-template source='
@@ -25,9 +29,34 @@ Name: {{input value=name}}
 {{/live-exec}}'}}
 ```
 
-![Screenshot](https://raw.githubusercontent.com/TeknoFiend/ember-live-exec/master/docs/demo.png)
+![Demo Screenshot](https://raw.githubusercontent.com/TeknoFiend/ember-live-exec/master/docs/demo.png)
 
-![Screencapture](https://raw.githubusercontent.com/TeknoFiend/ember-live-exec/master/docs/demo.gif)
+![Demo Screencapture](https://raw.githubusercontent.com/TeknoFiend/ember-live-exec/master/docs/demo.gif)
+
+### Component Definition
+
+You can also specify actions and default values for properties on the associated component with the `live-exec-component` component. NOTE: This uses _eval_ and is _NOT_ safe where XSS is a concern... if you're not sure what that means please don't use it!
+
+```hbs
+{{#live-exec}}
+  {{live-exec-template source='
+<div>Foo is: {{foo}}</div>
+<button {{action "toggleFoo"}}>Toggle Foo</button>
+'}}
+  {{live-exec-component source='
+foo: true,
+actions: {
+  toggleFoo: function() {
+    console.log("Foo Toggled!");
+    this.set( "foo", !this.get("foo") );
+  }
+}
+'}}
+  {{live-exec-output}}
+{{/live-exec}}
+```
+
+![Component Demo Screenshot](https://raw.githubusercontent.com/TeknoFiend/ember-live-exec/master/docs/demo_component.png)
 
 ## Customization
 
