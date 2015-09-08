@@ -6,6 +6,8 @@ Similar to [Ember Twiddle](http://ember-twiddle.com/) or [JSFiddle](https://jsfi
 
 Demo: [http://teknofiend.github.io/live-exec-demo](http://teknofiend.github.io/live-exec-demo)
 
+Ember 1.13+
+
 ## Installation
 
 `ember install ember-live-exec`
