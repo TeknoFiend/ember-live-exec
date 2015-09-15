@@ -8,6 +8,8 @@ Demo: [http://teknofiend.github.io/live-exec-demo](http://teknofiend.github.io/l
 
 Ember 1.13+
 
+Thanks to [Stanley Stuart](https://github.com/fivetanley) for the kernel of logic (dynamically creating the template) that makes this all possible.
+
 ## Installation
 
 `ember install ember-live-exec`
